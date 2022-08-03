@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
-import JobsView from "../views/JobsView.vue";
+import SetsView from "../views/SetsView.vue";
+import CatchAllView from "../views/CatchAllView.vue";
 
 const routes = [
   {
@@ -15,9 +16,15 @@ const routes = [
     component: AboutView,
   },
   {
-    path: "/jobs",
-    name: "jobs",
-    component: JobsView,
+    path: "/sets",
+    name: "sets",
+    component: SetsView,
+  },
+  //404
+  {
+    path: "/:catchAll(.*)",
+    name: "404",
+    component: CatchAllView,
   },
 ];
 

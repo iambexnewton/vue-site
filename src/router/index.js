@@ -20,6 +20,16 @@ const routes = [
     name: "sets",
     component: SetsView,
   },
+  {
+    path: "/sets/edit:setId",
+    name: "edit",
+    component: Edit,
+  },
+  // {
+  //   path: "/sets/view:setID",
+  //   name: "viewSet",
+  //   component: ViewSet,
+  // },
   //404
   {
     path: "/:catchAll(.*)",

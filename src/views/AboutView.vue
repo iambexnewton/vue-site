@@ -46,6 +46,11 @@
 
     <label>Notes</label>
     <input type="text" required  v-model='notes' />
+
+
+ <label>Photo URL</label>
+    <input type="text"  v-model='photo' />
+
 <div class="submit">
     <button>Submit</button>
   </div>
@@ -55,11 +60,35 @@
  
 
   
-
+<div class="card">
   <p>Date : {{date}}</p>
   <p>Set : {{sets}}</p>
   <p>Score : {{scores}}</p>
   <p>Notes : {{notes}}</p>
+  <p>Photo: {{photo}}</p>
+<button class="delete">
+  <fa icon="trash-can"></fa>
+</button>
+
+<router-link to="/about/edit/:setId">
+<button class="edit">
+  <fa icon="pencil"></fa>
+</button></router-link>
+
+
+
+<!-- <fa :icon="['fab', 'twitter']" /> -->
+
+  <router-link to="/sets/view"></router-link>
+
+ 
+
+
+
+</div>
+
+
+
 
 
 </template>
@@ -68,6 +97,13 @@
 
 
 <script>
+
+
+
+
+
+
+
 export default {
   data() {
     return {
@@ -75,13 +111,21 @@ export default {
       sets: [],
       notes: '',
       scores: [],
+      photo:'',
       data: [],
       setsErrorMessage: ''
     }
   },
   methods: {
     handleSubmit() {
-     this.errorMessage = this.sets.length > 0 ? '' : 'Please enter the set details'  
+     this.setsErrorMessage = this.sets.length > 0 ? '' : 'Please enter the set details'  
+
+      if(!this.setsErrorMessage) {
+        console.log(this.date)
+        console.log(this.sets)
+        console.log(this.scores)
+        console.log(this.notes)
+      }
     }
   }
 }
@@ -133,6 +177,11 @@ button {
 }
 .submit {
   text-align: center;
+}
+.card {
+  background-color: rgb(252, 233, 233);
+  
+
 }
 
 input[type="checkbox"]

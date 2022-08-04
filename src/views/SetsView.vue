@@ -1,9 +1,9 @@
 <template>
   <h1>Sets</h1>
-<li v-for="set in sets" :key="set.name">
+<div v-for="set in sets" :key="set.name">
 <h2>{{set.name}}</h2>
 
-</li>
+</div>
     
 
 </template>

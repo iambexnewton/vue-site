@@ -12,7 +12,8 @@
 
 
 export default {
-name: "Edit"
+name: "edit",
+component: "EditView"
   
 }
 </script>

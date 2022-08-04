@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import AboutView from "../views/AboutView.vue";
+import YourSets from "../views/AboutView.vue";
+import EditView from "../views/EditView.vue";
 import SetsView from "../views/SetsView.vue";
 import CatchAllView from "../views/CatchAllView.vue";
 
@@ -11,9 +12,9 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/about",
-    name: "about",
-    component: AboutView,
+    path: "/yourSets",
+    name: "yourSets",
+    component: YourSets,
   },
   {
     path: "/sets",
@@ -21,9 +22,9 @@ const routes = [
     component: SetsView,
   },
   {
-    path: "/sets/edit:setId",
+    path: "/yourSets/edit:setId",
     name: "edit",
-    component: Edit,
+    component: EditView,
   },
   // {
   //   path: "/sets/view:setID",

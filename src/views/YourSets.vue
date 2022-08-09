@@ -4,6 +4,20 @@
     <p>Lorem blah blah </p>
   </div>
 
+
+<section class="search-area">
+ <form id="search"> 
+  <fa icon="search" class="icon"></fa>
+<input class="search" type="text" placeholder="Name of set"/>
+  </form>
+  </section>
+
+
+<button @click="toggleShowForm">UPDATE YOUR SET LISTSX</button>
+
+
+
+<section v-if="showForm">
 <form @submit.prevent="handleSubmit">
     <label>Date</label>
     <input type="date" v-model='date' />
@@ -45,7 +59,7 @@
 
 
     <label>Notes</label>
-    <input type="text" required  v-model='notes' />
+    <input type="text" v-model='notes' />
 
 
  <label>Photo URL</label>
@@ -55,38 +69,32 @@
     <button>Submit</button>
   </div>
  </form>
-    
+    </section>
 
- 
 
-  
+
+
+
+<section class="card-area">
 <div class="card">
-  <p>Date : {{date}}</p>
-  <p>Set : {{sets}}</p>
-  <p>Score : {{scores}}</p>
-  <p>Notes : {{notes}}</p>
-  <p>Photo: {{photo}}</p>
+  <p class="card-date">Date : {{date}}</p>
+  <p class="card-sets">Set : {{set}}</p>
+  <p class="card-score">Score : {{scores}}</p>
+  <p class="card-notes">Notes : {{notes}}</p>
+  <p class="card-photo">Photo: {{photo}}</p>
 <button class="delete">
   <fa icon="trash-can"></fa>
 </button>
 
-<router-link to="/about/edit/:setId">
+<router-link to="/yoursets/:setId">
 <button class="edit">
   <fa icon="pencil"></fa>
 </button></router-link>
 
 
-
-<!-- <fa :icon="['fab', 'twitter']" /> -->
-
   <router-link to="/sets/view"></router-link>
-
- 
-
-
-
 </div>
-
+</section>
 
 
 
@@ -97,42 +105,69 @@
 
 
 <script>
-
-
-
-
-
-
+ import { SetsService } from "../../services/SetsService.js";
 
 export default {
-  data() {
+  data: function () {
     return {
-      date: [], 
-      sets: [],
-      notes: '',
-      scores: [],
-      photo:'',
-      data: [],
-      setsErrorMessage: ''
+      showForm: false,
+      // date: [], 
+      // sets: [],
+      // notes: '',
+      // scores: [],
+      // photo:'',
+      // data: [],
+      setsErrorMessage: '',
+      loading: false,
+      type: [],
+
     }
   },
-  methods: {
-    handleSubmit() {
-     this.setsErrorMessage = this.sets.length > 0 ? '' : 'Please enter the set details'  
+created: async function (){
+  try {
+    this.loading = true;
+    let response = await this.getAllSets();
+    this.sets = response.data;
+  }
+  catch(error){
+    this.setsErrorMessage = error;
+    this.loading = false;
+  }
+},
 
-      if(!this.setsErrorMessage) {
-        console.log(this.date)
-        console.log(this.sets)
-        console.log(this.scores)
-        console.log(this.notes)
-      }
+
+  methods: {
+    // handleSubmit() {
+    //  this.setsErrorMessage = this.sets.length > 0 ? '' : 'Please enter the set details'  
+
+    //   if(!this.setsErrorMessage) {
+    //     console.log(this.date)
+    //     console.log(this.sets)
+    //     console.log(this.scores)
+    //     console.log(this.notes)
+    //   }
+    // },
+getAllSets: async function (){
+return SetsService.getAllSets()
+},
+
+
+    toggleShowForm(){
+      this.showForm = !this.showForm
     }
   }
+
 }
 
 </script>
 
 <style>
+
+#search {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
 form {
   max-width: 420px;
   margin: 30px auto;
@@ -159,14 +194,7 @@ input {
   border-bottom: 1px solid #ddd;
   color: #555;
 }
-.score {
-   display: block;
-  padding: 10px 6px;
-  width: 100%;
-  box-sizing: border-box;
-  border: none;
-  border-bottom: 1px solid #ddd
-}
+
 button {
   background: blue;
   border: 0;
@@ -178,12 +206,31 @@ button {
 .submit {
   text-align: center;
 }
+.card-area {
+display: flex;
+justify-content: center;
+}
 .card {
-  background-color: rgb(252, 233, 233);
-  
-
+background-color: rgb(252, 233, 233);
+width: 60%;
+display: flex;
+flex-direction: column ;
+align-items: flex-start;
+padding: 30px
 }
 
+
+.score {
+   display: block;
+  padding: 10px 6px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #ddd
+}
+.icon {
+ align-self: center;
+}
 input[type="checkbox"]
  {
   display: inline-block;
@@ -193,6 +240,7 @@ input[type="checkbox"]
   top: 2px;
   
 }
+
 ul {
   list-style: none;
   display: flex;

@@ -2,7 +2,7 @@
   <div class="home">
     <div>dfghj</div>
     <img alt="Vue logo" src="../assets/logo.png" />
-  
+  <Spinner />
   </div>
 </template>
 

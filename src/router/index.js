@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import YourSets from "../views/AboutView.vue";
+import YourSets from "../views/YourSets.vue";
 import EditView from "../views/EditView.vue";
 import SetsView from "../views/SetsView.vue";
 import CatchAllView from "../views/CatchAllView.vue";
@@ -12,8 +12,8 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/yourSets",
-    name: "yourSets",
+    path: "/yoursets",
+    name: "yoursets",
     component: YourSets,
   },
   {
@@ -22,20 +22,22 @@ const routes = [
     component: SetsView,
   },
   {
-    path: "/yourSets/edit:setId",
+    path: "/yoursets/:setId",
     name: "edit",
     component: EditView,
   },
-  // {
-  //   path: "/sets/view:setID",
-  //   name: "viewSet",
-  //   component: ViewSet,
-  // },
+
   //404
   {
     path: "/:catchAll(.*)",
     name: "404",
     component: CatchAllView,
+  },
+  {
+    path: "/about",
+    name: "About",
+    component: () =>
+      important(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
 ];
 

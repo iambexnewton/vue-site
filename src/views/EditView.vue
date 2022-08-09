@@ -1,7 +1,7 @@
 <template>
   <h1>Edit</h1>
 
-
+<p>sdfghj</p>
 
   
 
@@ -13,7 +13,7 @@
 
 export default {
 name: "edit",
-component: "EditView"
+
   
 }
 </script>

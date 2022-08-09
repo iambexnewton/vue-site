@@ -1,12 +1,27 @@
 <template>
   <nav>
+    <!-- <Spinner /> -->
     <router-link to="/">Home</router-link> |
-    <router-link :to="{ name: 'yourSets' }">Your Sets</router-link> |
+    <router-link :to="{ name: 'yoursets' }">Your Sets</router-link> |
     <router-link :to="{ name: 'sets' }">Sets</router-link> |
-    
+  <!-- <router-link :to="{ name: 'edit' }"></router-link>  -->
+ 
   </nav>
+
   <router-view />
 </template>
+
+<script>
+
+// import Spinner from "./components/Spinner.vue";
+
+export default {
+  name: "App",
+  // components: {Spinner}
+}
+
+
+</script>
 
 <style>
 #app {

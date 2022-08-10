@@ -1,15 +1,37 @@
-{
-  "sets": [
-      {
-          "id": "sdfghj",
-          "date": "Test",
-          "set": "Test",
-          "notes": "not great",
-          "score": "5",
-          "photo": "https://i.imgur.com/7gvvlZ3.jpeg"
-      }
-  ]
+{  
+"yourSets": [
+  {
+    "id": 0,
+    "date": "today",
+    "name": "lego star wars",
+    "score": 5,
+    "notes": "lots of parts",
+    "photo": "https://i.imgur.com/7gvvlZ3.jpeg"
+
+  },
+  {
+    "id": 1,
+    "date": "today",
+    "name": "lego disney castle",
+    "score": 5,
+    "notes": "lots of parts",
+    "photo": "https://i.imgur.com/riF4pMl.jpeg"
+  },
+  {
+    "id": 2,
+    "date": "today",
+    "name": "lego destiny tallneck",
+    "score": 5,
+    "notes": "lots of parts",
+    "photo": "https://i.imgur.com/erjBN8D.jpeg"
+  },
+  {
+    "id": 3,
+    "date": "today",
+    "name": "lego the simpsons",
+    "score": 5,
+    "notes": "lots of parts",
+    "photo": "https://i.imgur.com/1mSI424.jpeg"
+  }
+]
 }
-
-
-

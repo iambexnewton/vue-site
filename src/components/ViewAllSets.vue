@@ -1,34 +1,25 @@
 <template>
   <div>
-    <h1>Todos</h1>
-    <ul>
-      <li v-for="job in jobs" :key="job.id">
-       <p>{{job.name}}</p>
-      </li>
-      
-    </ul>
-   
+    
   </div>
-  
 </template>
 
 <script>
-
-export default {
-    
+export default { 
   data() {
     return {
-      jobs: []
-    };
-  },
-mounted(){
-    fetch('http://localhost:9900/jobs')
-    .then(res => res.json())
-    .then(data => this.jobs = data)
-    .catch(err => console.log(err.message))
-    
-    console.log(this.jobs)
+  
 }
+  }
+
+// mounted(){
+//     fetch('http://localhost:9900/jobs')
+//     .then(res => res.json())
+//     .then(data => this.jobs = data)
+//     .catch(err => console.log(err.message))
+    
+//     console.log(this.jobs)
+// }
 
 
 

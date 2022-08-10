@@ -4,20 +4,29 @@
     <router-link to="/">Home</router-link> |
     <router-link :to="{ name: 'yoursets' }">Your Sets</router-link> |
     <router-link :to="{ name: 'sets' }">Sets</router-link> |
-  <!-- <router-link :to="{ name: 'edit' }"></router-link>  -->
- 
   </nav>
+<button @click="back">go back</button>
+<button @click="forward">go forward</button>
 
   <router-view />
 </template>
 
 <script>
 
-// import Spinner from "./components/Spinner.vue";
+//  import Spinner from "./components/Spinner.vue";
 
 export default {
-  name: "App",
-  // components: {Spinner}
+  // name: "App",
+  //  components: {Spinner}
+
+methods: {
+
+ back()
+ {this.$router.go(-2)},
+
+  forward()
+  {this.forward.$router.go(1)}
+},
 }
 
 

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import YourSets from "../views/YourSets.vue";
-import EditView from "../views/EditView.vue";
+import YourSets from "../views/userSets/YourSets.vue";
+import EditView from "../views/userSets/EditView.vue";
 import SetsView from "../views/SetsView.vue";
 import CatchAllView from "../views/CatchAllView.vue";
 
@@ -17,14 +17,14 @@ const routes = [
     component: YourSets,
   },
   {
+    path: "/yoursets/:id",
+    name: "editView",
+    component: EditView,
+  },
+  {
     path: "/sets",
     name: "sets",
     component: SetsView,
-  },
-  {
-    path: "/yoursets/:setId",
-    name: "edit",
-    component: EditView,
   },
 
   //404

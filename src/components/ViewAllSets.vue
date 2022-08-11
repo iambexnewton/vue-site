@@ -10,29 +10,29 @@ export default {
     return {
   
 }
-  }
+  },
 
-// mounted(){
-//     fetch('http://localhost:9900/jobs')
-//     .then(res => res.json())
-//     .then(data => this.jobs = data)
-//     .catch(err => console.log(err.message))
+mounted(){
+    fetch('http://localhost:9900/jobs')
+    .then(res => res.json())
+    .then(data => this.jobs = data)
+    .catch(err => console.log(err.message))
     
-//     console.log(this.jobs)
-// }
+    console.log(this.jobs)
+},
 
 
 
-//   async created() {
-//     try {
-//       const res = await axios.get(`http://localhost:9900/todos`);
+  async created() {
+    try {
+      const res = await axios.get(`http://localhost:9900/todos`);
 
-//       this.todosArray = res.data;
-//       console.log("This" + todos)
-//     } catch (e) {
-//       console.log(e);
-//     }
-//   }
+      this.todosArray = res.data;
+      console.log("This" + todos)
+    } catch (e) {
+      console.log(e);
+    }
+  }
 };
 </script>
 

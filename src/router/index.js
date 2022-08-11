@@ -18,8 +18,9 @@ const routes = [
   },
   {
     path: "/yoursets/:id",
-    name: "editView",
+    name: "EditView",
     component: EditView,
+    props: true,
   },
   {
     path: "/sets",

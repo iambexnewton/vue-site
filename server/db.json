@@ -1,37 +1,122 @@
-{  
-"yourSets": [
-  {
-    "id": 0,
-    "date": "today",
-    "name": "lego star wars",
-    "score": 5,
-    "notes": "lots of parts",
-    "photo": "https://i.imgur.com/7gvvlZ3.jpeg"
-
-  },
-  {
-    "id": 1,
-    "date": "today",
-    "name": "lego disney castle",
-    "score": 5,
-    "notes": "lots of parts",
-    "photo": "https://i.imgur.com/riF4pMl.jpeg"
-  },
-  {
-    "id": 2,
-    "date": "today",
-    "name": "lego destiny tallneck",
-    "score": 5,
-    "notes": "lots of parts",
-    "photo": "https://i.imgur.com/erjBN8D.jpeg"
-  },
-  {
-    "id": 3,
-    "date": "today",
-    "name": "lego the simpsons",
-    "score": 5,
-    "notes": "lots of parts",
-    "photo": "https://i.imgur.com/1mSI424.jpeg"
-  }
-]
+{
+  "userSets": [
+    {
+      "id": 0,
+      "name": "lego star wars",
+      "score": 5,
+      "notes": "lots of parts",
+      "photo": "https://i.imgur.com/7gvvlZ3.jpeg",
+      "group": []
+    },
+    {
+      "id": 1,
+      "name": "lego disney castle",
+      "score": 5,
+      "notes": "lots of parts",
+      "photo": "https://i.imgur.com/riF4pMl.jpeg",
+      "group": []
+    },
+    {
+      "id": 2,
+      "name": "lego destiny tallneck",
+      "score": 5,
+      "notes": "lots of parts",
+      "photo": "https://i.imgur.com/erjBN8D.jpeg",
+      "group": []
+    },
+    {
+      "id": 3,
+      "name": "lego the simpsons",
+      "score": 5,
+      "notes": "lots of parts",
+      "photo": "https://i.imgur.com/1mSI424.jpeg",
+      "group": []
+    },
+    {
+      "name": "pirate ship",
+      "scores": "five",
+      "notes": "great",
+      "photo": "https://imgur.com/gallery/x8XXM",
+      "group": [],
+      "id": 4
+    },
+    {
+      "name": "Death star trash compactor",
+      "scores": "five",
+      "notes": "",
+      "photo": "https://i.imgur.com/cQDNa9c.jpeg",
+      "group": [],
+      "id": 5
+    },
+    {
+      "name": "Death star trash compactor",
+      "scores": "five",
+      "notes": "great",
+      "photo": "https://i.imgur.com/cQDNa9c.jpeg",
+      "group": [],
+      "id": 6
+    },
+    {
+      "name": "Death star trash compactor",
+      "scores": "five",
+      "notes": "great",
+      "photo": "https://i.imgur.com/cQDNa9c.jpeg",
+      "group": [],
+      "id": 7
+    },
+    {
+      "name": "Harry potter: divination class",
+      "scores": "four",
+      "notes": "good",
+      "photo": "https://www.legekaeden.dk/scommerce/images/76396-lego-harry-potter-hogwarts-scene-spadomslektion.jpg?i=3748734",
+      "group": [],
+      "id": 8
+    },
+    {
+      "name": "Pirates of barracuda",
+      "scores": "three",
+      "notes": "lots of parts",
+      "photo": "https://www.proshop.dk/Images/300x251/2879848_204f489ecc37.png",
+      "group": "vehicals",
+      "id": 9
+    }
+  ],
+  "groups": [
+    {
+      "id": 4,
+      "name": "star-wars"
+    },
+    {
+      "id": 5,
+      "name": "the simpsons"
+    },
+    {
+      "id": 6,
+      "name": "harry potter"
+    },
+    {
+      "id": 7,
+      "name": "friends"
+    },
+    {
+      "id": 8,
+      "name": "football"
+    },
+    {
+      "id": 9,
+      "name": "vehicals"
+    },
+    {
+      "id": 10,
+      "name": "duplo"
+    },
+    {
+      "id": 11,
+      "name": "video game"
+    },
+    {
+      "id": 12,
+      "name": "disney"
+    }
+  ]
 }

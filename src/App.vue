@@ -1,14 +1,31 @@
 <template>
-  <nav>
+  <nav class="nav">
     <!-- <Spinner /> -->
     <router-link to="/">Home</router-link> |
     <router-link :to="{ name: 'yoursets' }">Your Sets</router-link> |
     <router-link :to="{ name: 'sets' }">Sets</router-link> |
   </nav>
-<button @click="back">go back</button>
-<button @click="forward">go forward</button>
+
 
   <router-view />
+  <footer class="footer">
+    <div>
+<ul>
+  <li>
+      This is not a Lego site.
+  </li>
+  <li>
+      Created to practice Vue3 
+  </li>
+  <li>
+     Made by rebecca Newton
+  </li>
+</ul>
+    
+      
+      
+    </div>
+  </footer>
 </template>
 
 <script>
@@ -19,14 +36,7 @@ export default {
   // name: "App",
   //  components: {Spinner}
 
-methods: {
 
- back()
- {this.$router.go(-2)},
-
-  forward()
-  {this.forward.$router.go(1)}
-},
 }
 
 
@@ -43,6 +53,7 @@ methods: {
 
 nav {
   padding: 30px;
+  background: #ffd400;
 }
 
 nav a {
@@ -50,11 +61,20 @@ nav a {
   color: #2c3e50;
   text-decoration: none;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
-
+nav a:hover {
+  cursor: pointer;
+ 
+}
 nav a.router-link-exact-active {
   color: white;
   background: red;
 }
+footer {
+  background-color:#201d48;
+  color: white;
+}
+
+
 </style>

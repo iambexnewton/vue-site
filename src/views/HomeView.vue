@@ -1,47 +1,41 @@
 <template>
   <div class="home">
-    <div>dfghj</div>
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <div>HOME I GUESS</div>
+   </div>
+
  
-  </div>
 
-  <div v-for="name in matchingNames" :key="name"> {{name}}</div>
+<div v-if="error">{{error}}</div>
+<div v-if="userSets.length">
+ <UserLegoList :userSets="userSets" />
+ 
+</div>
 
-  <!-- <p>Welcome {{name}} {{age}}</p>
-  <button @click="handleClick">
-    click me
-  </button> -->
-
-
-  <input type="text" v-model="search">
-  <p>search term - {{search}}</p>
+<div v-else><Spinner /></div>
 </template>
 
+
 <script>
+import UserLegoList from "../components/UserLegoList.vue";
+import Spinner from "../components/Spinner.vue";
+import getPosts from "../composables/getPosts.js"
+import getGroups from "../composables/getGroups";
 
 
 
-
-// @ is an alias to /src
-
-import { ref, computed } from "vue";
 
 
 export default {
 name: 'HomeView',
+components: { UserLegoList, Spinner},
 setup(){
-  const search = ref('')
-  const names = ref(["fghj", "dfghj", "vbn", "xcvu"])
+  const {userSets, groups, error, load} = getPosts()
 
- const matchingNames = computed(() => {
-  return names.value.filter((name)=> name.includes(search.value))
- })
+  load()
 
-return { names, search, matchingNames}
+return { userSets, error}
 },
 
 
-  
- 
-};
+}
 </script>

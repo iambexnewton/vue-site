@@ -1,5 +1,5 @@
 <template>
-  <h1>edit edit edit</h1>
+  <h1>single</h1>
 <button @click="back">go back</button>
 <button @click="forward">go forward</button>
 

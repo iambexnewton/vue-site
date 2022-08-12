@@ -13,12 +13,6 @@
 <router-link :to="{name : 'FormView'}">
   <button class="cta">Upload a new set</button></router-link>
   </section>
-
-
-
-
-
-
 <!-- <div class="card" >
  <p class="card-date">Date : {{set.date}} </p>
   <p class="card-name">Name : {{set.name}}</p>
@@ -30,10 +24,8 @@
 </div> 
  </div> -->
 
-
-
 <section class="card-area" v-for="set in usersSets" :key="set.id">
-<router-link :to="{ name: 'EditView', params: { id: set.id }}"> 
+<router-link :to="{ name: 'SingleView', params: { id: set.id }}"> 
 <div class="lego-container">
 <div class="container" >
   <div class="cube">
@@ -53,20 +45,21 @@
 </div>
 
 
-  
-
   </div>
+ 
+  </div> </router-link> 
 <div class="button-container">
-      <button class="edit">
+  <router-link :to="{ name: 'EditView', params: { id: set.id }}"><button class="edit">
         <fa icon="pencil"></fa>
-          </button>
+          </button> </router-link>
+      
 
       <button class="delete">
         <fa icon="trash-can"></fa>
           </button>
 </div>
-</div>
-  </router-link> 
+
+
 
 </section>
 

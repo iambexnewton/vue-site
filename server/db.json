@@ -34,7 +34,7 @@
     },
     {
       "name": "pirate ship",
-      "scores": "five",
+      "score": 5,
       "notes": "great",
       "photo": "https://imgur.com/gallery/x8XXM",
       "group": [],
@@ -42,7 +42,7 @@
     },
     {
       "name": "Death star trash compactor",
-      "scores": "five",
+      "score": 4,
       "notes": "",
       "photo": "https://i.imgur.com/cQDNa9c.jpeg",
       "group": [],
@@ -50,7 +50,7 @@
     },
     {
       "name": "Death star trash compactor",
-      "scores": "five",
+      "score": 5,
       "notes": "great",
       "photo": "https://i.imgur.com/cQDNa9c.jpeg",
       "group": [],
@@ -58,7 +58,7 @@
     },
     {
       "name": "Death star trash compactor",
-      "scores": "five",
+      "score": 4,
       "notes": "great",
       "photo": "https://i.imgur.com/cQDNa9c.jpeg",
       "group": [],
@@ -66,7 +66,7 @@
     },
     {
       "name": "Harry potter: divination class",
-      "scores": "four",
+      "score": 4,
       "notes": "good",
       "photo": "https://www.legekaeden.dk/scommerce/images/76396-lego-harry-potter-hogwarts-scene-spadomslektion.jpg?i=3748734",
       "group": [],
@@ -79,6 +79,70 @@
       "photo": "https://www.proshop.dk/Images/300x251/2879848_204f489ecc37.png",
       "group": "vehicals",
       "id": 9
+    },
+    {
+      "name": "Ghostbusters",
+      "score": 4,
+      "notes": "fun",
+      "photo": "https://i.imgur.com/JUSb0nu.jpeg",
+      "group": "vehicals",
+      "id": 10
+    },
+    {
+      "name": "Yellow Submarine",
+      "score": 4,
+      "notes": "fantastic",
+      "photo": "https://i.imgur.com/omhCG3s.jpeg",
+      "group": "vehicals",
+      "id": 11
+    },
+    {
+      "name": "Yellow Submarine",
+      "score": 4,
+      "notes": "fantastic",
+      "photo": "https://i.imgur.com/omhCG3s.jpeg",
+      "group": "vehicals",
+      "id": 12
+    },
+    {
+      "name": "Yellow submarine",
+      "score": 4,
+      "notes": "fantastic",
+      "photo": "https://i.imgur.com/omhCG3s.jpeg",
+      "group": "vehicals",
+      "id": 13
+    },
+    {
+      "name": "Yellow submarine",
+      "score": 4,
+      "notes": "fantastic",
+      "photo": "https://i.imgur.com/omhCG3s.jpeg",
+      "group": "vehicals",
+      "id": 14
+    },
+    {
+      "name": "porsche",
+      "score": 5,
+      "notes": "fun",
+      "photo": "https://i.imgur.com/wBGAq85.jpeg",
+      "group": "vehicals",
+      "id": 15
+    },
+    {
+      "name": "castle",
+      "score": 5,
+      "notes": "big",
+      "photo": "https://i.imgur.com/a4IVdOH.jpeg",
+      "group": "disney",
+      "id": 16
+    },
+    {
+      "name": "The Mandalorian",
+      "score": "four",
+      "notes": "fun",
+      "photo": "https://i.imgur.com/54VT5YF.jpeg",
+      "group": "star-wars",
+      "id": 17
     }
   ],
   "groups": [

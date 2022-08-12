@@ -9,10 +9,13 @@
   <fa icon="search" class="icon"></fa>
 <input class="search" type="text" placeholder="Name of set"/>
   </form>
+
+<router-link :to="{name : 'FormView'}">
+  <button class="cta">Upload a new set</button></router-link>
   </section>
 
 
-<FormComponent />
+
 
 
 
@@ -72,7 +75,7 @@
 
 
 <script>
- import FormComponent from "../../components/FormComponent.vue"
+
 
 export default {
 
@@ -107,7 +110,7 @@ export default {
  },
  
  
-      components: {  FormComponent }
+   
 }
 
 </script>
@@ -163,6 +166,26 @@ button.edit {
 
   flex-direction: row;
   margin:0;
+}
+.cta {
+  border-radius: 4px;
+  border-width: 2px;
+  color: #0b1117;
+  font-weight: 550;
+  padding: 16px;
+  font-size: 0.875rem;
+  border:solid;
+  position:relative;
+  border-collapse: collapse;
+   background-color: rgb(253, 128, 36); 
+   border-color: rgb(253, 128, 36); 
+}
+.cta:hover{
+  cursor: pointer;
+  background: transparent;
+  font-weight: 550;
+  padding: 16px;
+
 }
 .submit {
   text-align: center;

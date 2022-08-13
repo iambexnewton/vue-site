@@ -1,76 +1,44 @@
 {
   "userSets": [
     {
-      "id": 0,
-      "name": "lego star wars",
-      "score": 5,
-      "notes": "lots of parts",
-      "photo": "https://i.imgur.com/7gvvlZ3.jpeg",
-      "group": []
-    },
-    {
-      "id": 1,
-      "name": "lego disney castle",
-      "score": 5,
-      "notes": "lots of parts",
-      "photo": "https://i.imgur.com/riF4pMl.jpeg",
-      "group": []
-    },
-    {
-      "id": 2,
-      "name": "lego destiny tallneck",
-      "score": 5,
-      "notes": "lots of parts",
-      "photo": "https://i.imgur.com/erjBN8D.jpeg",
-      "group": []
-    },
-    {
-      "id": 3,
-      "name": "lego the simpsons",
-      "score": 5,
-      "notes": "lots of parts",
-      "photo": "https://i.imgur.com/1mSI424.jpeg",
-      "group": []
-    },
-    {
-      "name": "pirate ship",
-      "score": 5,
-      "notes": "great",
-      "photo": "https://imgur.com/gallery/x8XXM",
-      "group": [],
-      "id": 4
+      "name": "the simpsons",
+      "score": "four",
+      "notes": "fun",
+      "photo": "https://www.lego.com/cdn/cs/set/assets/blt36100620951ce98a/71006_alt1.jpg",
+      "group": "5",
+      "id": "3"
     },
     {
       "name": "Death star trash compactor",
       "score": 4,
       "notes": "",
       "photo": "https://i.imgur.com/cQDNa9c.jpeg",
-      "group": [],
-      "id": 5
+      "group": "star-wars",
+      "id": "5"
     },
     {
       "name": "Death star trash compactor",
       "score": 5,
       "notes": "great",
       "photo": "https://i.imgur.com/cQDNa9c.jpeg",
-      "group": [],
-      "id": 6
+      "group": "star-wars",
+      "id": "6"
     },
     {
       "name": "Death star trash compactor",
       "score": 4,
       "notes": "great",
       "photo": "https://i.imgur.com/cQDNa9c.jpeg",
-      "group": [],
-      "id": 7
+      "group": "star-wars",
+      "id": "7"
     },
     {
       "name": "Harry potter: divination class",
       "score": 4,
       "notes": "good",
       "photo": "https://www.legekaeden.dk/scommerce/images/76396-lego-harry-potter-hogwarts-scene-spadomslektion.jpg?i=3748734",
-      "group": [],
-      "id": 8
+      "group": "harry potter",
+      "id": "8"
     },
     {
       "name": "Pirates of barracuda",
@@ -78,7 +46,7 @@
       "notes": "lots of parts",
       "photo": "https://www.proshop.dk/Images/300x251/2879848_204f489ecc37.png",
       "group": "vehicals",
-      "id": 9
+      "id": "9"
     },
     {
       "name": "Ghostbusters",
@@ -86,7 +54,7 @@
       "notes": "fun",
       "photo": "https://i.imgur.com/JUSb0nu.jpeg",
       "group": "vehicals",
-      "id": 10
+      "id": "10"
     },
     {
       "name": "Yellow Submarine",
@@ -94,7 +62,7 @@
       "notes": "fantastic",
       "photo": "https://i.imgur.com/omhCG3s.jpeg",
       "group": "vehicals",
-      "id": 11
+      "id": "11"
     },
     {
       "name": "Yellow Submarine",
@@ -102,7 +70,7 @@
       "notes": "fantastic",
       "photo": "https://i.imgur.com/omhCG3s.jpeg",
       "group": "vehicals",
-      "id": 12
+      "id": "12"
     },
     {
       "name": "Yellow submarine",
@@ -113,73 +81,65 @@
       "id": 13
     },
     {
-      "name": "Yellow submarine",
-      "score": 4,
-      "notes": "fantastic",
-      "photo": "https://i.imgur.com/omhCG3s.jpeg",
-      "group": "vehicals",
+      "name": "zxcfvgbhn",
+      "score": "three",
+      "notes": "asdxcvb",
+      "photo": "https://i.imgur.com/54VT5YF.jpeg",
+      "group": "star-wars",
       "id": 14
     },
     {
-      "name": "porsche",
-      "score": 5,
-      "notes": "fun",
-      "photo": "https://i.imgur.com/wBGAq85.jpeg",
-      "group": "vehicals",
+      "name": "sdfghj",
+      "score": "two",
+      "notes": "sdfghjk",
+      "photo": "https://i.imgur.com/54VT5YF.jpeg",
+      "group": "star-wars",
       "id": 15
     },
     {
-      "name": "castle",
-      "score": 5,
-      "notes": "big",
-      "photo": "https://i.imgur.com/a4IVdOH.jpeg",
-      "group": "disney",
-      "id": 16
-    },
-    {
-      "name": "The Mandalorian",
-      "score": "four",
-      "notes": "fun",
+      "name": "fghjk",
+      "score": "one",
+      "notes": "dfcgvhbjnm",
       "photo": "https://i.imgur.com/54VT5YF.jpeg",
       "group": "star-wars",
-      "id": 17
+      "id": 16
     }
   ],
   "groups": [
     {
-      "id": 4,
+      "id": "4",
       "name": "star-wars"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "the simpsons"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "harry potter"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "friends"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "football"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "vehicals"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "duplo"
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "video game"
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "disney"
     }
   ]

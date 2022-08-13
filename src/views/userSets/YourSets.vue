@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1>Your Sets</h1>
-    <p>Here you can upload, rate and view your sets, <br /> keep track of your sets and have fun!</p>
+    <p>Here you can upload, rate, search and view your sets, <br /> keep track of your sets and have fun!</p>
   </div>
 
 <section class="search-area">
@@ -13,18 +13,56 @@
 <router-link :to="{name : 'FormView'}">
   <button class="cta">Upload a new set</button></router-link>
   </section>
-<!-- <div class="card" >
- <p class="card-date">Date : {{set.date}} </p>
+
+
+  <section  v-for="set in usersSets" :key="set.id">
+<router-link :to="{ name: 'SingleView', params: { id: set.id }}"> 
+<div class="card-area">
+
+ <div class="card" >
+ <div> 
+  <img src="../../assets/NicePng_yellow-png_881644.png" class="img" alt=" "/>
+ 
+ </div>
+  
+
+  <div class="parent">
+
+ <div class="div1">
+  <div class="img-container">
+ <img :src="set.photo" class="img" alt=" "/>
+</div> 
+ </div>
+ <div class="div2">
   <p class="card-name">Name : {{set.name}}</p>
   <p class="card-score">Score :{{set.score}}</p>
   <p class="card-notes">Notes :{{set.notes}}</p>
   <p class="card-id">ID :{{set.id}}</p>
-  <div class="img-container">
-  <img :src="set.photo" class="img" alt=" ">
-</div> 
- </div> -->
+ </div>
+  </div>
+ 
 
-<section class="card-area" v-for="set in usersSets" :key="set.id">
+    
+
+   
+<div class="button-container">
+  <router-link :to="{ name: 'EditView', params: { id: set.id }}">
+  <a class="edit">
+    <fa icon="pencil"></fa>
+    </a>
+  </router-link>
+      
+      <button class="delete" @click="clickDeleteSet(id)">
+        <fa icon="trash-can"></fa>
+          </button>
+</div>
+</div>
+
+</div> 
+</router-link>
+</section>
+
+<!-- <section class="card-area" v-for="set in usersSets" :key="set.id">
 <router-link :to="{ name: 'SingleView', params: { id: set.id }}"> 
 <div class="lego-container">
 <div class="container" >
@@ -43,32 +81,25 @@
       </div>
   </div>
 </div>
-
-
   </div>
- 
-  </div> </router-link> 
+  </div>
+   </router-link> 
 <div class="button-container">
   <router-link :to="{ name: 'EditView', params: { id: set.id }}"><button class="edit">
         <fa icon="pencil"></fa>
           </button> </router-link>
-      
-
-      <button class="delete">
+      <button class="delete" @click="clickDeleteSet(id)">
         <fa icon="trash-can"></fa>
           </button>
 </div>
-
-
-
-</section>
+</section> -->
 
 
 </template>
 
 
 <script>
-
+import { SetsService } from "../../../services/SetsService";
 
 export default {
 
@@ -101,8 +132,20 @@ export default {
       })
     .catch(err => console.log(err.message))
  },
- 
- 
+ methods : {
+  clickDeleteContact : async function (id){
+    try {
+       let response = await SetsService.deleteSet(id);
+   if(response){
+    let response = await SetsService.getAllSets();
+    this.usersSets = (data)
+   }
+    }
+  catch(error){
+console.log(error.message)
+  }
+  }
+ }
    
 }
 
@@ -183,32 +226,36 @@ button.edit {
 .submit {
   text-align: center;
 }
- .card-area {
+
+
+.card-area {
 display:flex;
-flex-direction: wrap;
-background-color:  #E6F3FF
+justify-content: center;
+background-color: rgba(29, 228, 250, 0.215);
 
 }
-/* .card {
+.card {
 background-color: rgb(252, 233, 233);
 width: 60%;
-display: flex;
-flex-direction: column ;
 align-items: flex-start;
 padding: 30px;
 margin: 30px;
 border-radius: 20px;
-} */
+}
+ 
 
 
-/* .score {
+
+
+
+.score {
    display: block;
   padding: 10px 6px;
   width: 100%;
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid #ddd
-} */
+}
 .icon {
  align-self: center;
 }
@@ -236,7 +283,7 @@ li {
 
 /* lego cube */
 
-.lego-container {
+/* .lego-container {
   display: flex;
   flex-direction: row;
 }
@@ -289,7 +336,7 @@ li {
 
 .bottom {
   transform: translateY(100px) rotateX(-90deg);
-}
+} */
 .img-container {
  margin-left: auto;
  margin: auto;

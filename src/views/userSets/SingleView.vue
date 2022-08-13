@@ -9,7 +9,7 @@
 <!-- <div v-if="userSet.length" class="item"> -->
 <h3>{{userSet.name}}</h3>
 <p>{{userSet.notes}}</p>
-<!-- <p>{{group}}</p> -->
+<p>{{userSet.score}}</p>
  <!-- </div> -->
  
  <!-- <div v-else><Spinner /></div> -->
@@ -19,7 +19,7 @@
     </div>
 
 
-<!-- <pre>{{group}}</pre> -->
+<!-- <pre>{{userSet.group}}</pre> -->
   
 
 </template>

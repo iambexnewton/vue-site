@@ -8,6 +8,11 @@ export class SetsService {
     return axios.get(dataURL);
   }
 
+  static getSingleUserSet() {
+    let dataURL = `${this.serverURL}/userSets/${id}`;
+    return axios.get(dataURL);
+  }
+
   static getAllGroups() {
     let dataURL = `${this.serverURL}/groups`;
     return axios.get(dataURL);
@@ -20,8 +25,10 @@ export class SetsService {
   //edit
   static editSet(set, id) {
     let dataURL = `${this.serverURL}/userSets/${id}`;
-    return axios.put(dataURL, id);
+    return axios.put(dataURL, set);
   }
+
+  //delete
   static deleteSet(id) {
     let dataURL = `${this.serverURL}/userSets/${id}`;
     return axios.delete(dataURL);

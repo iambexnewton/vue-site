@@ -77,7 +77,7 @@ export default {
             score: [],
             notes: "",
             photo: "",
-            group: [],
+            group: "",
             
           },
          groups:[],

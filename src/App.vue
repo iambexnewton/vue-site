@@ -53,7 +53,7 @@ export default {
 }
 
 nav {
-  padding: 30px;
+  padding: 40px;
   background: #ffd400;
 }
 

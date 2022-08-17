@@ -11,23 +11,17 @@
   </form>
 
 <router-link :to="{name : 'FormView'}">
-  <button class="cta">Upload a new set</button></router-link>
+  <a class="cta">Upload a new set</a></router-link>
   </section>
 
 
-  <section  v-for="set in usersSets" :key="set.id">
-<router-link :to="{ name: 'SingleView', params: { id: set.id }}"> 
-<div class="card-area">
-
- <div class="card" >
- <div> 
-  <img src="../../assets/NicePng_yellow-png_881644.png" class="img" alt=" "/>
+<section class="grid-container">
+<div class="card-wrapper" v-for="set in usersSets" :key="set.id">
  
- </div>
-  
+  <!-- <router-link :to="{ name: 'SingleView', params: { id: set.id }}"> -->
 
-  <div class="parent">
-
+  <div class="card"> 
+<div class="parent">
  <div class="div1">
   <div class="img-container">
  <img :src="set.photo" class="img" alt=" "/>
@@ -39,27 +33,22 @@
   <p class="card-notes">Notes :{{set.notes}}</p>
   <p class="card-id">ID :{{set.id}}</p>
  </div>
-  </div>
- 
-
-    
-
-   
-<div class="button-container">
+ <!-- <a v-on:click="clickDeleteSet(set.id)">x</a>  -->
+  </div> 
+  <!-- </router-link>  -->
+   <div class="button-container">
   <router-link :to="{ name: 'EditView', params: { id: set.id }}">
   <a class="edit">
     <fa icon="pencil"></fa>
     </a>
-  </router-link>
-      
-      <button class="delete" @click="clickDeleteSet(id)">
+ </router-link>
+ 
+  </div>
+<button class="delete" v-on:click="clickDeleteSet(set.id)">
         <fa icon="trash-can"></fa>
           </button>
-</div>
-</div>
-
-</div> 
-</router-link>
+  </div>
+  </div>
 </section>
 
 <!-- <section class="card-area" v-for="set in usersSets" :key="set.id">
@@ -99,55 +88,60 @@
 
 
 <script>
-import { SetsService } from "../../../services/SetsService";
+import {SetsService} from "../../../services/SetsService"
 
 export default {
 
     data: function () {
+
         return {
-            showForm: false,
-            date: "",
-            notes: "",
-            name: "",
-            scores: "",
-            tags: "",
-            id: "",
-            photo: "",
+            // showForm: false,
             group:[],
-            // data: [],
-            setsErrorMessage: "",
-            // loading: true,
+            // setsErrorMessage: null,
+            //  loading: false,
             
             usersSets: [],
-            
-        };
-        
+        }
     },
-    mounted(){
-    fetch('http://localhost:9900/userSets')
-    .then(res => res.json())
-    .then((data) => {
-      this.usersSets = (data)
-      // loading(false)
-      })
-    .catch(err => console.log(err.message))
- },
- methods : {
-  clickDeleteContact : async function (id){
-    try {
-       let response = await SetsService.deleteSet(id);
-   if(response){
-    let response = await SetsService.getAllSets();
-    this.usersSets = (data)
-   }
-    }
-  catch(error){
-console.log(error.message)
-  }
-  }
- }
-   
+
+
+created : async function (){
+try {
+  this.loading = true
+let response = await this.getAllSetsData();
+this.usersSets = response.data
+this.loading = false
+console.log(response.data)
 }
+catch (error){
+this.setsErrorMessage = error
+this.loading = false
+}
+},
+
+methods : {
+getAllSetsData : async function (){
+  return await SetsService.getAllSets();
+},
+clickDeleteSet : async function(id) {
+  try {
+    let response = await SetsService.deleteSet(id);
+    if(response){
+       this.loading = true
+let response = await this.getAllSetsData();
+this.usersSets = response.data
+this.loading = false
+    }
+  }
+catch(error){
+  console.log(error)
+}
+},
+ },   
+ 
+       
+    }
+   
 
 </script>
 
@@ -227,20 +221,31 @@ button.edit {
   text-align: center;
 }
 
+.grid-container {
+  background-color: rgba(29, 228, 250, 0.215);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.card-wrapper {
 
-.card-area {
-display:flex;
-justify-content: center;
-background-color: rgba(29, 228, 250, 0.215);
+ margin: 40px;
+  display: flex;
+  flex-direction: wrap;
+  justify-items: space-between;
+  justify-content: space-evenly;
+  align-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 
 }
 .card {
 background-color: rgb(252, 233, 233);
 width: 60%;
-align-items: flex-start;
 padding: 30px;
 margin: 30px;
 border-radius: 20px;
+
 }
  
 

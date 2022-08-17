@@ -4,7 +4,7 @@
     <router-link to="/">Home</router-link> |
     <router-link :to="{ name: 'yoursets' }">Your Sets</router-link> |
     <router-link :to="{ name: 'sets' }">Sets</router-link> |
-    <router-link :to="{ name: 'FormView' }">Add a set</router-link> |
+    <!-- <router-link :to="{ name: 'FormView' }">Add a set</router-link> | -->
   </nav>
 
 

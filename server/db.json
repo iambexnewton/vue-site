@@ -1,30 +1,6 @@
 {
   "userSets": [
     {
-      "name": "the simpsons",
-      "score": "four",
-      "notes": "fun",
-      "photo": "https://www.lego.com/cdn/cs/set/assets/blt36100620951ce98a/71006_alt1.jpg",
-      "group": "5",
-      "id": "3"
-    },
-    {
-      "name": "Death star trash compactor",
-      "score": 4,
-      "notes": "",
-      "photo": "https://i.imgur.com/cQDNa9c.jpeg",
-      "group": "star-wars",
-      "id": "5"
-    },
-    {
-      "name": "Death star trash compactor",
-      "score": 5,
-      "notes": "great",
-      "photo": "https://i.imgur.com/cQDNa9c.jpeg",
-      "group": "star-wars",
-      "id": "6"
-    },
-    {
       "name": "Death star trash compactor",
       "score": 4,
       "notes": "great",
@@ -57,52 +33,12 @@
       "id": "10"
     },
     {
-      "name": "Yellow Submarine",
-      "score": 4,
-      "notes": "fantastic",
-      "photo": "https://i.imgur.com/omhCG3s.jpeg",
-      "group": "vehicals",
-      "id": "11"
-    },
-    {
-      "name": "Yellow Submarine",
-      "score": 4,
-      "notes": "fantastic",
-      "photo": "https://i.imgur.com/omhCG3s.jpeg",
-      "group": "vehicals",
-      "id": "12"
-    },
-    {
       "name": "Yellow submarine",
       "score": 4,
       "notes": "fantastic",
       "photo": "https://i.imgur.com/omhCG3s.jpeg",
       "group": "vehicals",
       "id": 13
-    },
-    {
-      "name": "zxcfvgbhn",
-      "score": "three",
-      "notes": "asdxcvb",
-      "photo": "https://i.imgur.com/54VT5YF.jpeg",
-      "group": "star-wars",
-      "id": 14
-    },
-    {
-      "name": "sdfghj",
-      "score": "two",
-      "notes": "sdfghjk",
-      "photo": "https://i.imgur.com/54VT5YF.jpeg",
-      "group": "star-wars",
-      "id": 15
-    },
-    {
-      "name": "fghjk",
-      "score": "one",
-      "notes": "dfcgvhbjnm",
-      "photo": "https://i.imgur.com/54VT5YF.jpeg",
-      "group": "star-wars",
-      "id": 16
     }
   ],
   "groups": [
